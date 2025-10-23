@@ -1,5 +1,73 @@
 site_name: WRO-FE 2025 Mindcraft Documentation
+site_url: https://dextertaha.github.io/WRO-FE-2025-Mindcraft-MkDocs-documentation/
+repo_url: https://github.com/DexterTaha/WRO-FE-2025-Mindcraft
+repo_name: DexterTaha/WRO-FE-2025-Mindcraft
+edit_uri: edit/main/docs/
+
 theme:
   name: material
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+    - content.tabs.link
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.emoji
+
 nav:
   - Home: index.md
+  - Getting Started:
+    - Overview: overview.md
+    - Setup: setup.md
+    - Quickstart: quickstart.md
+    - Project Structure: project-structure.md
+  - Robot:
+    - Hardware: hardware.md
+    - Electronics: electronics.md
+    - Build Guide: build.md
+  - Software:
+    - Architecture: architecture.md
+    - Commands: commands.md
+    - Algorithms: algorithms.md
+    - Vision System: vision.md
+  - Operations:
+    - Testing: testing.md
+    - Troubleshooting: troubleshooting.md
+    - FAQ: faq.md
+  - Meta:
+    - Changelog: changelog.md
+    - License: license.md
+    - Contributing: contributing.md
